@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sathana's Portfolio</title>
+  <link rel="icon" type="image/png" href="https://i.pinimg.com/736x/46/56/a2/4656a23e3bcf845f6e9739a62831887d.jpg">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #ffffff;
+      margin: 0;
+      padding: 0;
+      transition: background 0.3s, color 0.3s;
+    }
+    header {
+      background: linear-gradient(to right, #af693de0, #f1d684fc);
+      color: white;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .about {
+      padding: 60px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      text-align: left;
+    }
+    .about img {
+      width: 150px;
+      border-radius: 50%;
+      border: 5px solid #af693de0;
+    }
+    .about-text {
+      max-width: 600px;
+    }
+    .resume-button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #af693de0;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s;
+    }
+    .resume-button:hover {
+      background: #948c8c;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 28px;
+      margin: 40px 0 20px;
+    }
+    .works-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
+    }
+    .works-row {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .card {
+      width: 250px;
+      height: 150px;
+      perspective: 1000px;
+    }
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+      cursor: pointer;
+    }
+    .card:hover .card-inner {
+      transform: rotateY(180deg);
+    }
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .card-front {
+      background:  #af693de0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 18px;
+      color:white
+    }
+    .card-back {
+      background: #dfd1bb;
+      color: white;
+      transform: rotateY(180deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      color: black;
+    }
+    .journey {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 40px 20px;
+      background: white;
+    }
+    .education, .experiences {
+      width: 48%;
+    }
+    .education ul, .experiences ul {
+      list-style: none;
+      padding: 0;
+    }
+    .education li, .experiences li {
+      background: #fff;
+      padding: 15px;
+      margin: 10px 0;
+      border-left: 5px solid #af693d;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    .skills, .contact {
+      padding: 40px 20px;
+      background: white;
+      text-align: center;
+    }
+    .skills-icons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .skills-icons img {
+      width: 50px;
+      margin: 10px;
+      transition: transform 0.3s;
+    }
+    .skills-icons img:hover {
+      transform: scale(1.2);
+    }
+    .contact p {
+      text-align: center;
+      margin: 10px 0;
+    }
+    .contact a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #2575fc;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #eee;
+    }
+    .view-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 14px;
+  background: #af693d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+.view-btn:hover {
+  background: #f1d684;
+  color: black;
+}
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  nav {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .journey {
+    flex-direction: column;
+  }
+
+  .education, .experiences {
+    width: 100%;
+  }
+
+  .works-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    height: auto;
+  }
+
+  .skills-icons {
+    flex-wrap: wrap;
+  }
+
+  .skills-icons img {
+    width: 40px;
+    margin: 8px;
+  }
+
+  .resume-button {
+    width: 100%;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <img src="WhatsApp Image 2025-06-29 at 00.36.09_4c826ff0.jpg" alt="Profile Image" style="height: 40px; border-radius: 50%; vertical-align: middle; margin-right: 10px;">
+      <strong>Sathana's Portfolio</strong>
+    </div>
+    <nav>
+      <a href="#about">About Me</a>
+      <a href="#works">My Works</a>
+      <a href="#journey">My Journey</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="about" id="about">
+    <img src="WhatsApp Image 2025-06-29 at 19.57.14_86499b0a.jpg" alt="Sathana's Image">
+    <div class="about-text">
+      <h2>Hi, I'm Sathana<br>Creative Technologist & AI Enthusiast</h2>
+      <p>I'm— part coder, part designer, and full-time creative thinker. I enjoy turning complex ideas into clean, smart, and visually engaging solutions. Whether it’s AI, design, or just a cool side project, I’m always exploring new ways to blend creativity with tech. I don’t do boring — I build with purpose and a spark of originality.</p>
+      <a class="resume-button" href="Sathana - Resume.pdf" target="_blank" rel="noopener noreferrer">View Resume</a>
+
+    </div>
+  </section>
+
+<section id="works">
+  <h2 class="section-title">My Works</h2>
+  <div class="works-container">
+    <div class="works-row">
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">Pinterest Replica UI</div>
+          <div class="card-back">
+            Figma replica of Pinterest UI design
+            <br><br>
+            <a href="figma-pinterest.html" class="view-btn" target="_blank">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">Data Visualization sheets - Superstore data</div>
+          <div class="card-back">
+            Screenshot of worked Tableau dashboard
+            <br><br>
+            <a href="tableau.html" class="view-btn" target="_blank">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">Netflix data Dashboard</div>
+          <div class="card-back">
+            Creative dashboard made in Canva
+            <br><br>
+            <a href="canva-dashboard.html" class="view-btn" target="_blank">View Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="works-row">
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">HTML/CSS/JS Projects</div>
+          <div class="card-back">
+            Front-end projects using HTML, CSS, JS
+            <br><br>
+            <a href="frontend-projects.html" class="view-btn" target="_blank">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">Python Projects</div>
+          <div class="card-back">
+            Mini apps and ML projects using Python
+            <br><br>
+            <a href="python-projects.html" class="view-btn" target="_blank">View Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <section class="journey" id="journey">
+    <div class="education">
+      <h2 class="section-title">Education</h2>
+      <ul>
+        <li><strong>Bachelor of Computer Science and Design</strong> (2022–2026)<br>SNS College of Engineering, Coimbatore</li>
+        <li><strong>HSC</strong> (2020–2022)<br>The Little Kingdom School – ISC, with 83%</li>
+        <li><strong>SSLC</strong> (2007–2020)<br>The Little Kingdom School – ICSE, with 80.3%</li>
+      </ul>
+    </div>
+    <div class="experiences">
+      <h2 class="section-title">Experiences</h2>
+      <ul>
+        <li><strong>Data Science Intern</strong><br>Jul 2024 – Aug 2024<br>Nativeva Internship Program<br>Built a CNN model for potato disease classification with optimized deployment.</li>
+        <li><strong>Human Resource Intern</strong><br>Oct 2023 – Nov 2023<br>Corizo – Empowering Tomorrow's Leaders<br>Handled recruitment, onboarding, and HR analytics at Corizo.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="skills" id="skills">
+    <h2 class="section-title">My Skills</h2>
+    <div class="skills-icons">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="Figma" title="Figma">
+      <img src="https://tse2.mm.bing.net/th/id/OIP.S0kV-FmzjzwA1bR0rAJAagAAAA" alt="Tableau" title="Tableau">
+      <img src="https://tse2.mm.bing.net/th/id/OIP.GEmKEiw9TRKIgGwJK0F53gHaHa" alt="Canva" title="Canva">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="Python" title="Python">
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2 class="section-title">Contact</h2>
+    <p>📧 smsathana12@gmail.com | 📞 +91 9442612804 </p>
+    <p>
+      <a href="https://www.linkedin.com/in/sathana-sm">LinkedIn</a> |
+      <a href="https://github.com/Sathana-jeehelloji">GitHub</a> |
+      <a href="https://pin.it/7EixmmPAc">Pinterest</a>
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2025 Sathana. All rights reserved.
+  </footer>
+</body>
+</html>
