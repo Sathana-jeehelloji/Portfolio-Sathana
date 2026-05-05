@@ -250,7 +250,101 @@
     width: 100%;
   }
 }
+  .skills-certifications {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 60px 40px;
+  gap: 60px;
+}
 
+  .skills-box, .certifications-box {
+    width: 48%;
+  }
+/* REPLACE your full certification CSS with this */
+
+.certifications-box {
+  width: 48%;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.cert-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.cert-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #ececec;
+  border-radius: 18px;
+  padding: 24px 20px;
+  height: 180px; /* fixed same height for all cards */
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+  transition: 0.3s;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.cert-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.10);
+}
+
+.cert-logo {
+  width: 85px;
+  height: auto;
+  margin-right: 22px;
+  object-fit: contain;
+}
+
+.cert-content {
+  flex: 1;
+}
+
+.cert-content h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: #111;
+  line-height: 1.4;
+}
+
+.cert-content p {
+  margin: 10px 0 16px;
+  font-size: 14px;
+  color: #666;
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 14px;
+  border: 1px solid #c78a5c;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #c78a5c;
+  background: #fff;
+}
+
+.verify-icon {
+  position: absolute;
+  top: 0;
+  right: 18px;
+  background: #c78a5c;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 0 0 8px 8px;
+  font-size: 16px;
+  font-weight: bold;
+}
 
   </style>
 </head>
@@ -274,7 +368,7 @@
     <div class="about-text">
       <h2>Hi, I'm Sathana<br>Creative Technologist & AI Enthusiast</h2>
       <p>I'm— part coder, part designer, and full-time creative thinker. I enjoy turning complex ideas into clean, smart, and visually engaging solutions. Whether it’s AI, design, or just a cool side project, I’m always exploring new ways to blend creativity with tech. I don’t do boring — I build with purpose and a spark of originality.</p>
-      <a class="resume-button" href="Sathana - Resume.pdf" target="_blank" rel="noopener noreferrer">View Resume</a>
+      <a class="resume-button" href="SathanaSM_Resume (6).pdf (2) (1).pdf" target="_blank" rel="noopener noreferrer">View Resume</a>
 
     </div>
   </section>
@@ -356,20 +450,101 @@
     <div class="experiences">
       <h2 class="section-title">Experiences</h2>
       <ul>
+        <li><strong>Data Science & Machine Learning Intern</strong><br>Dec 2025 – Feb 2026<br>Zaalima Development Pvt. Ltd.<br>Built an XGBoost-based predictive maintenance model and a Dockerized OCR-NLP system for legal document extraction.</li>
+        <li><strong>Artificial Intelligence Intern</strong><br>Jun 2025 – Jul 2025<br>Codec Technologies<br>Developed a sentiment-based recommender system and deployed it with an optimized pipeline.</li>
         <li><strong>Data Science Intern</strong><br>Jul 2024 – Aug 2024<br>Nativeva Internship Program<br>Built a CNN model for potato disease classification with optimized deployment.</li>
         <li><strong>Human Resource Intern</strong><br>Oct 2023 – Nov 2023<br>Corizo – Empowering Tomorrow's Leaders<br>Handled recruitment, onboarding, and HR analytics at Corizo.</li>
       </ul>
     </div>
   </section>
 
-  <section class="skills" id="skills">
+  <section class="skills-certifications" id="skills">
+  
+  <!-- Skills -->
+  <div class="skills-box">
     <h2 class="section-title">My Skills</h2>
     <div class="skills-icons">
-      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="Figma" title="Figma">
-      <img src="https://tse2.mm.bing.net/th/id/OIP.S0kV-FmzjzwA1bR0rAJAagAAAA" alt="Tableau" title="Tableau">
-      <img src="https://tse2.mm.bing.net/th/id/OIP.GEmKEiw9TRKIgGwJK0F53gHaHa" alt="Canva" title="Canva">
-      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="Python" title="Python">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" title="Figma">
+      <img src="https://tse2.mm.bing.net/th/id/OIP.S0kV-FmzjzwA1bR0rAJAagAAAA" title="Tableau">
+      <img src="https://tse2.mm.bing.net/th/id/OIP.GEmKEiw9TRKIgGwJK0F53gHaHa" title="Canva">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" title="Python">
     </div>
+  </div>
+
+  <!-- REPLACE only your current certification HTML with this -->
+
+<div class="certifications-box">
+  <h2 class="section-title">Certifications</h2>
+
+  <div class="cert-grid">
+
+    <!-- Card 1 -->
+    <a href="MicrsoftAzureAI_Certificate.pdf" target="_blank" class="cert-link">
+      <div class="cert-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg" class="cert-logo">
+
+        <div class="cert-content">
+          <h3>Microsoft Azure AI Fundamentals</h3>
+          <p>Microsoft</p>
+          <span class="badge">Verified</span>
+        </div>
+
+        <div class="verify-icon">✔</div>
+      </div>
+    </a>
+
+    <!-- Card 2 -->
+    <a href="WhatsApp Image 2026-04-27 at 6.45.40 PM.jpeg" target="_blank" class="cert-link">
+      <div class="cert-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Infosys_logo.svg" class="cert-logo">
+
+        <div class="cert-content">
+          <h3>Generative AI Infosys Springboard</h3>
+          <p>Infosys Springboard</p>
+          <span class="badge">Verified</span>
+        </div>
+
+        <div class="verify-icon">✔</div>
+      </div>
+    </a>
+
+    <!-- Card 3 -->
+    <a href="WhatsApp Image 2026-04-28 at 4.17.53 PM.jpeg" target="_blank" class="cert-link">
+      <div class="cert-card">
+        <img src="https://th.bing.com/th/id/OIP.Dvw7O1Gno3sxp9Wjmg-r6gHaEK?w=329&h=185&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" class="cert-logo">
+
+        <div class="cert-content">
+          <h3>Python & SQL</h3>
+          <p>Scaler Academy</p>
+          <span class="badge">Verified</span>
+        </div>
+
+        <div class="verify-icon">✔</div>
+      </div>
+    </a>
+
+    <!-- Card 4 -->
+    <a href="AWS Certified AI Practitioner certificate.pdf" target="_blank" class="cert-link">
+      <div class="cert-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" class="cert-logo">
+
+        <div class="cert-content">
+          <h3>AWS Certified AI Practitioner</h3>
+          <p>Amazon Web Services</p>
+          <span class="badge">Apr 2026 – Apr 2029</span>
+        </div>
+
+        <div class="verify-icon">✔</div>
+      </div>
+    </a>
+
+      </a>
+
+    </div>
+  </div>
+
+</section>
+  
   </section>
 
   <section class="contact" id="contact">
