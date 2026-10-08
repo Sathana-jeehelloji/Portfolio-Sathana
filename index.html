@@ -3,562 +3,1029 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sathana's Portfolio</title>
-  <link rel="icon" type="image/png" href="https://i.pinimg.com/736x/46/56/a2/4656a23e3bcf845f6e9739a62831887d.jpg">
+  <title>Sathana S M — Creative Technologist & AI Engineer</title>
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="Portfolio of Sathana S M — Creative Technologist & AI Engineer. Specializing in Artificial Intelligence, Machine Learning, UI/UX Design, and Data Storytelling." />
+  <meta name="keywords" content="Sathana SM, Creative Technologist, AI Engineer, Machine Learning, UI/UX Designer, Computer Science and Design, Portfolio, Coimbatore" />
+  <meta name="author" content="Sathana S M" />
+  
+  <meta property="og:title" content="Sathana S M — Creative Technologist & AI Engineer" />
+  <meta property="og:description" content="Turning complex AI models, data pipelines, and design ideas into elegant, impactful digital solutions." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="WhatsApp Image 2025-06-29 at 19.57.14_86499b0a.jpg" />
 
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #ffffff;
-      margin: 0;
-      padding: 0;
-      transition: background 0.3s, color 0.3s;
-    }
-    header {
-      background: linear-gradient(to right, #af693de0, #f1d684fc);
-      color: white;
-      padding: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    .about {
-      padding: 60px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 40px;
-      text-align: left;
-    }
-    .about img {
-      width: 150px;
-      border-radius: 50%;
-      border: 5px solid #af693de0;
-    }
-    .about-text {
-      max-width: 600px;
-    }
-    .resume-button {
-      margin-top: 20px;
-      padding: 10px 20px;
-      background: #af693de0;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-      transition: background 0.3s;
-    }
-    .resume-button:hover {
-      background: #948c8c;
-    }
-    .section-title {
-      text-align: center;
-      font-size: 28px;
-      margin: 40px 0 20px;
-    }
-    .works-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-      padding: 20px;
-    }
-    .works-row {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    .card {
-      width: 250px;
-      height: 150px;
-      perspective: 1000px;
-    }
-    .card-inner {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      text-align: center;
-      transition: transform 0.8s;
-      transform-style: preserve-3d;
-      cursor: pointer;
-    }
-    .card:hover .card-inner {
-      transform: rotateY(180deg);
-    }
-    .card-front, .card-back {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      backface-visibility: hidden;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-    .card-front {
-      background:  #af693de0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      font-size: 18px;
-      color:white
-    }
-    .card-back {
-      background: #dfd1bb;
-      color: white;
-      transform: rotateY(180deg);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px;
-      color: black;
-    }
-    .journey {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      padding: 40px 20px;
-      background: white;
-    }
-    .education, .experiences {
-      width: 48%;
-    }
-    .education ul, .experiences ul {
-      list-style: none;
-      padding: 0;
-    }
-    .education li, .experiences li {
-      background: #fff;
-      padding: 15px;
-      margin: 10px 0;
-      border-left: 5px solid #af693d;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    }
-    .skills, .contact {
-      padding: 40px 20px;
-      background: white;
-      text-align: center;
-    }
-    .skills-icons {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .skills-icons img {
-      width: 50px;
-      margin: 10px;
-      transition: transform 0.3s;
-    }
-    .skills-icons img:hover {
-      transform: scale(1.2);
-    }
-    .contact p {
-      text-align: center;
-      margin: 10px 0;
-    }
-    .contact a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #2575fc;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #eee;
-    }
-    .view-btn {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 8px 14px;
-  background: #af693d;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  font-size: 14px;
-  transition: background 0.3s;
-}
-.view-btn:hover {
-  background: #f1d684;
-  color: black;
-}
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
-  }
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="WhatsApp Image 2025-06-29 at 00.36.09_4c826ff0.jpg" />
 
-  nav {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 10px;
-  }
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  .about {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-text {
-    max-width: 100%;
-    padding: 0 10px;
-  }
-
-  .journey {
-    flex-direction: column;
-  }
-
-  .education, .experiences {
-    width: 100%;
-  }
-
-  .works-row {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card {
-    width: 90%;
-    height: auto;
-  }
-
-  .skills-icons {
-    flex-wrap: wrap;
-  }
-
-  .skills-icons img {
-    width: 40px;
-    margin: 8px;
-  }
-
-  .resume-button {
-    width: 100%;
-  }
-}
-  .skills-certifications {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 60px 40px;
-  gap: 60px;
-}
-
-  .skills-box, .certifications-box {
-    width: 48%;
-  }
-/* REPLACE your full certification CSS with this */
-
-.certifications-box {
-  width: 48%;
-}
-
-.cert-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-.cert-link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-
-.cert-card {
-  position: relative;
-  display: flex;
-  align-items: center;
-  background: #ffffff;
-  border: 1px solid #ececec;
-  border-radius: 18px;
-  padding: 24px 20px;
-  height: 180px; /* fixed same height for all cards */
-  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
-  transition: 0.3s;
-  cursor: pointer;
-  overflow: hidden;
-}
-
-.cert-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.10);
-}
-
-.cert-logo {
-  width: 85px;
-  height: auto;
-  margin-right: 22px;
-  object-fit: contain;
-}
-
-.cert-content {
-  flex: 1;
-}
-
-.cert-content h3 {
-  margin: 0;
-  font-size: 15px;
-  font-weight: 700;
-  color: #111;
-  line-height: 1.4;
-}
-
-.cert-content p {
-  margin: 10px 0 16px;
-  font-size: 14px;
-  color: #666;
-}
-
-.badge {
-  display: inline-block;
-  padding: 8px 14px;
-  border: 1px solid #c78a5c;
-  border-radius: 8px;
-  font-size: 13px;
-  color: #c78a5c;
-  background: #fff;
-}
-
-.verify-icon {
-  position: absolute;
-  top: 0;
-  right: 18px;
-  background: #c78a5c;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 0 0 8px 8px;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-  </style>
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <div>
-      <img src="WhatsApp Image 2025-06-29 at 00.36.09_4c826ff0.jpg" alt="Profile Image" style="height: 40px; border-radius: 50%; vertical-align: middle; margin-right: 10px;">
-      <strong>Sathana's Portfolio</strong>
-    </div>
-    <nav>
-      <a href="#about">About Me</a>
-      <a href="#works">My Works</a>
-      <a href="#journey">My Journey</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
 
-  <section class="about" id="about">
-    <img src="WhatsApp Image 2025-06-29 at 19.57.14_86499b0a.jpg" alt="Sathana's Image">
-    <div class="about-text">
-      <h2>Hi, I'm Sathana<br>Creative Technologist & AI Enthusiast</h2>
-      <p>I'm— part coder, part designer, and full-time creative thinker. I enjoy turning complex ideas into clean, smart, and visually engaging solutions. Whether it’s AI, design, or just a cool side project, I’m always exploring new ways to blend creativity with tech. I don’t do boring — I build with purpose and a spark of originality.</p>
-      <a class="resume-button" href="SathanaSM_Resume (6).pdf (2) (1).pdf" target="_blank" rel="noopener noreferrer">View Resume</a>
+  <!-- Ambient Texture Grid Layer -->
+  <div class="bg-grid-overlay" aria-hidden="true"></div>
 
-    </div>
-  </section>
-
-<section id="works">
-  <h2 class="section-title">My Works</h2>
-  <div class="works-container">
-    <div class="works-row">
-      <div class="card">
-        <div class="card-inner">
-          <div class="card-front">Pinterest Replica UI</div>
-          <div class="card-back">
-            Figma replica of Pinterest UI design
-            <br><br>
-            <a href="figma-pinterest.html" class="view-btn" target="_blank">View Project</a>
-          </div>
+  <!-- ==========================================================================
+       Navigation Header
+       ========================================================================== -->
+  <header class="site-header" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo" aria-label="Sathana Portfolio Home">
+        <div class="brand-avatar">
+          <img src="WhatsApp Image 2025-06-29 at 00.36.09_4c826ff0.jpg" alt="Sathana avatar icon" />
+          <span class="brand-status-dot" title="Available for opportunities"></span>
         </div>
-      </div>
-
-      <div class="card">
-        <div class="card-inner">
-          <div class="card-front">Data Visualization sheets - Superstore data</div>
-          <div class="card-back">
-            Screenshot of worked Tableau dashboard
-            <br><br>
-            <a href="tableau.html" class="view-btn" target="_blank">View Project</a>
-          </div>
+        <div class="brand-name">
+          <span>Sathana S M</span>
+          <span>Creative Technologist</span>
         </div>
-      </div>
-
-      <div class="card">
-        <div class="card-inner">
-          <div class="card-front">Netflix data Dashboard</div>
-          <div class="card-back">
-            Creative dashboard made in Canva
-            <br><br>
-            <a href="canva-dashboard.html" class="view-btn" target="_blank">View Project</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="works-row">
-      <div class="card">
-        <div class="card-inner">
-          <div class="card-front">HTML/CSS/JS Projects</div>
-          <div class="card-back">
-            Front-end projects using HTML, CSS, JS
-            <br><br>
-            <a href="frontend-projects.html" class="view-btn" target="_blank">View Project</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-inner">
-          <div class="card-front">Python Projects</div>
-          <div class="card-back">
-            Mini apps and ML projects using Python
-            <br><br>
-            <a href="python-projects.html" class="view-btn" target="_blank">View Project</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-  <section class="journey" id="journey">
-    <div class="education">
-      <h2 class="section-title">Education</h2>
-      <ul>
-        <li><strong>Bachelor of Computer Science and Design</strong> (2022–2026)<br>SNS College of Engineering, Coimbatore</li>
-        <li><strong>HSC</strong> (2020–2022)<br>The Little Kingdom School – ISC, with 83%</li>
-        <li><strong>SSLC</strong> (2007–2020)<br>The Little Kingdom School – ICSE, with 80.3%</li>
-      </ul>
-    </div>
-    <div class="experiences">
-      <h2 class="section-title">Experiences</h2>
-      <ul>
-        <li><strong>Data Science & Machine Learning Intern</strong><br>Dec 2025 – Feb 2026<br>Zaalima Development Pvt. Ltd.<br>Built an XGBoost-based predictive maintenance model and a Dockerized OCR-NLP system for legal document extraction.</li>
-        <li><strong>Artificial Intelligence Intern</strong><br>Jun 2025 – Jul 2025<br>Codec Technologies<br>Developed a sentiment-based recommender system and deployed it with an optimized pipeline.</li>
-        <li><strong>Data Science Intern</strong><br>Jul 2024 – Aug 2024<br>Nativeva Internship Program<br>Built a CNN model for potato disease classification with optimized deployment.</li>
-        <li><strong>Human Resource Intern</strong><br>Oct 2023 – Nov 2023<br>Corizo – Empowering Tomorrow's Leaders<br>Handled recruitment, onboarding, and HR analytics at Corizo.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="skills-certifications" id="skills">
-  
-  <!-- Skills -->
-  <div class="skills-box">
-    <h2 class="section-title">My Skills</h2>
-    <div class="skills-icons">
-      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" title="Figma">
-      <img src="https://tse2.mm.bing.net/th/id/OIP.S0kV-FmzjzwA1bR0rAJAagAAAA" title="Tableau">
-      <img src="https://tse2.mm.bing.net/th/id/OIP.GEmKEiw9TRKIgGwJK0F53gHaHa" title="Canva">
-      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" title="Python">
-    </div>
-  </div>
-
-  <!-- REPLACE only your current certification HTML with this -->
-
-<div class="certifications-box">
-  <h2 class="section-title">Certifications</h2>
-
-  <div class="cert-grid">
-
-    <!-- Card 1 -->
-    <a href="MicrsoftAzureAI_Certificate.pdf" target="_blank" class="cert-link">
-      <div class="cert-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg" class="cert-logo">
-
-        <div class="cert-content">
-          <h3>Microsoft Azure AI Fundamentals</h3>
-          <p>Microsoft</p>
-          <span class="badge">Verified</span>
-        </div>
-
-        <div class="verify-icon">✔</div>
-      </div>
-    </a>
-
-    <!-- Card 2 -->
-    <a href="WhatsApp Image 2026-04-27 at 6.45.40 PM.jpeg" target="_blank" class="cert-link">
-      <div class="cert-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Infosys_logo.svg" class="cert-logo">
-
-        <div class="cert-content">
-          <h3>Generative AI Infosys Springboard</h3>
-          <p>Infosys Springboard</p>
-          <span class="badge">Verified</span>
-        </div>
-
-        <div class="verify-icon">✔</div>
-      </div>
-    </a>
-
-    <!-- Card 3 -->
-    <a href="WhatsApp Image 2026-04-28 at 4.17.53 PM.jpeg" target="_blank" class="cert-link">
-      <div class="cert-card">
-        <img src="https://th.bing.com/th/id/OIP.Dvw7O1Gno3sxp9Wjmg-r6gHaEK?w=329&h=185&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" class="cert-logo">
-
-        <div class="cert-content">
-          <h3>Python & SQL</h3>
-          <p>Scaler Academy</p>
-          <span class="badge">Verified</span>
-        </div>
-
-        <div class="verify-icon">✔</div>
-      </div>
-    </a>
-
-    <!-- Card 4 -->
-    <a href="AWS Certified AI Practitioner certificate.pdf" target="_blank" class="cert-link">
-      <div class="cert-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" class="cert-logo">
-
-        <div class="cert-content">
-          <h3>AWS Certified AI Practitioner</h3>
-          <p>Amazon Web Services</p>
-          <span class="badge">Apr 2026 – Apr 2029</span>
-        </div>
-
-        <div class="verify-icon">✔</div>
-      </div>
-    </a>
-
       </a>
 
+      <!-- Desktop Nav Menu -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#works" class="nav-link">Selected Works</a></li>
+          <li><a href="#journey" class="nav-link">Experience</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#certifications" class="nav-link">Certifications</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions & Mobile Toggle -->
+      <div class="nav-actions">
+        <a href="SathanaSM_Resume (6).pdf (2) (1).pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="navResumeBtn">
+          <span>Resume</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </a>
+        <a href="#contact" class="btn btn-primary btn-glow" id="navContactBtn">
+          <span>Let's Talk</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-nav-toggle" aria-label="Open mobile navigation menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer-backdrop" aria-hidden="true"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Menu">
+    <div class="drawer-header">
+      <div class="brand-logo">
+        <div class="brand-avatar">
+          <img src="WhatsApp Image 2025-06-29 at 00.36.09_4c826ff0.jpg" alt="Sathana S M" />
+        </div>
+        <div class="brand-name">
+          <span>Sathana S M</span>
+          <span>Creative Technologist</span>
+        </div>
+      </div>
+      <button class="drawer-close-btn" style="background:none; border:none; color:#fff; cursor:pointer;" aria-label="Close menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <ul class="drawer-links">
+      <li><a href="#about" class="drawer-link">About <span>→</span></a></li>
+      <li><a href="#works" class="drawer-link">Selected Works <span>→</span></a></li>
+      <li><a href="#journey" class="drawer-link">Experience & Journey <span>→</span></a></li>
+      <li><a href="#skills" class="drawer-link">Skills & Stack <span>→</span></a></li>
+      <li><a href="#certifications" class="drawer-link">Certifications <span>→</span></a></li>
+      <li><a href="#contact" class="drawer-link">Contact <span>→</span></a></li>
+    </ul>
+
+    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 12px;">
+      <a href="SathanaSM_Resume (6).pdf (2) (1).pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="width: 100%;">
+        View Resume PDF
+      </a>
+      <a href="#contact" class="btn btn-primary" style="width: 100%;">
+        Get In Touch
+      </a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- ==========================================================================
+         Hero Section
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <div class="hero-badge-row">
+            <span class="status-pill">
+              <span class="pulse-dot"></span>
+              Available for AI & Creative Tech Roles
+            </span>
+            <span class="education-pill">
+              🎓 Computer Science & Design '26
+            </span>
+          </div>
+
+          <h1 class="hero-title">
+            Synthesizing <span class="text-gradient">Artificial Intelligence</span> with Human-Centered Design.
+          </h1>
+
+          <p class="hero-description">
+            I’m Sathana — part coder, part designer, and full-time creative thinker. I engineer intelligent systems, predictive machine learning models, and intuitive digital interfaces that transform complex ideas into purposeful products.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#works" class="btn btn-primary btn-glow">
+              <span>Explore Selected Works</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+
+            <a href="SathanaSM_Resume (6).pdf (2) (1).pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>Download Resume</span>
+            </a>
+          </div>
+
+          <!-- Quick Metrics Counter -->
+          <div class="hero-metrics">
+            <div class="metric-item">
+              <span class="metric-number" data-target="4" data-suffix="+">4<span class="accent">+</span></span>
+              <span class="metric-label">Industry Internships Completed</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-number" data-target="5" data-suffix="+">5<span class="accent">+</span></span>
+              <span class="metric-label">Verified AI & Tech Certifications</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-number" data-target="95" data-suffix="%">95<span class="accent">%</span></span>
+              <span class="metric-label">Predictive ML Model Accuracy</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Media Frame -->
+        <div class="hero-visual-card reveal reveal-delay-2">
+          <div class="visual-canvas-wrapper">
+            <!-- Floating Pill Top Left -->
+            <div class="floating-pill top-left">
+              <div class="pill-icon">⚡</div>
+              <div class="pill-text">
+                <span class="pill-title">AI & Data Science</span>
+                <span class="pill-subtitle">TensorFlow • XGBoost • Docker</span>
+              </div>
+            </div>
+
+            <!-- Main Portrait -->
+            <div class="visual-main-image-box">
+              <img src="WhatsApp Image 2025-06-29 at 19.57.14_86499b0a.jpg" alt="Sathana S M - Creative Technologist" loading="eager" />
+              <div class="visual-gradient-scrim"></div>
+              
+              <div class="visual-overlay-content">
+                <span class="overlay-tag">SNS COLLEGE OF ENGINEERING</span>
+                <h3 class="overlay-name">Sathana S M</h3>
+                <p class="overlay-sub">B.E. Computer Science & Design (2022–2026)</p>
+              </div>
+            </div>
+
+            <!-- Floating Pill Bottom Right -->
+            <div class="floating-pill bottom-right">
+              <div class="pill-icon indigo">✨</div>
+              <div class="pill-text">
+                <span class="pill-title">Design Engineering</span>
+                <span class="pill-subtitle">Figma • UI/UX • Modern Web</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         About & Philosophy Section (Bento Layout)
+         ========================================================================== -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">01 // About & Philosophy</span>
+          <h2 class="section-title">Where Analytical Rigor Meets Artistic Expression</h2>
+          <p class="section-subtitle">
+            Bridging algorithmic precision with human emotion to create digital products that feel both brilliant and natural.
+          </p>
+        </div>
+
+        <div class="about-bento">
+          <!-- Main Narrative Card -->
+          <div class="bento-card reveal">
+            <h3 class="about-philosophy-quote">
+              "I don't do boring. I turn complex ideas into <span>clean, smart, and visually engaging solutions.</span>"
+            </h3>
+            <p class="about-body-text">
+              Currently pursuing my Bachelor's degree in <strong>Computer Science and Design</strong> at SNS College of Engineering, Coimbatore. My academic and professional training is purpose-built to break the silo between back-end data engineering and front-end user experience.
+            </p>
+            <p class="about-body-text">
+              Whether building a deep learning model for agricultural diagnostics, deploying Dockerized OCR pipelines for legal intelligence, or crafting pixel-perfect design systems in Figma, I approach every project with curiosity, discipline, and aesthetic purpose.
+            </p>
+
+            <div class="about-traits-grid">
+              <div class="trait-item">
+                <span class="trait-icon">🧠</span>
+                <div class="trait-title">AI & ML Focus</div>
+                <div class="trait-desc">CNNs, XGBoost, Computer Vision, and Generative AI pipelines.</div>
+              </div>
+              <div class="trait-item">
+                <span class="trait-icon">🎨</span>
+                <div class="trait-title">Design Craft</div>
+                <div class="trait-desc">Wireframing, design systems, typography, and micro-interactions.</div>
+              </div>
+              <div class="trait-item">
+                <span class="trait-icon">📊</span>
+                <div class="trait-title">Data Insights</div>
+                <div class="trait-desc">Translating raw data into compelling executive stories in Tableau.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dual Identity Visual Showcase Card -->
+          <div class="bento-card persona-art-card reveal reveal-delay-2">
+            <div>
+              <span class="section-tag emerald" style="margin-bottom: 12px;">Dual Perspective</span>
+              <h3 style="font-family: var(--font-display); font-size: 1.4rem; color: #fff; margin-bottom: 12px;">
+                The Professional Engineer & The Studio Artist
+              </h3>
+              <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 24px;">
+                Creativity isn't a secondary skill — it's the core engine of how I think. Below is the blend of my formal engineering focus and my tactile artwork.
+              </p>
+            </div>
+
+            <div class="persona-images-row">
+              <div class="persona-img-wrapper">
+                <img src="WhatsApp Image 2025-06-29 at 12.54.46_dbefa138.jpg" alt="Sathana in formal business attire" loading="lazy" />
+                <span class="persona-label-tag">Engineering & AI</span>
+              </div>
+              <div class="persona-img-wrapper">
+                <img src="WhatsApp Image 2025-06-29 at 00.36.09_4c826ff0.jpg" alt="Artistic lion painting created by Sathana" loading="lazy" />
+                <span class="persona-label-tag">Original Artwork</span>
+              </div>
+            </div>
+
+            <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 16px; font-size: 0.85rem; color: var(--text-muted);">
+              💡 <em>"Art teaches patience and composition; engineering teaches architecture and execution."</em>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Selected Works & Projects Showcase
+         ========================================================================== -->
+    <section class="section works-section" id="works">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">02 // Portfolio Portfolio</span>
+          <h2 class="section-title">Selected Works & Systems</h2>
+          <p class="section-subtitle">
+            An curated archive of product design prototypes, machine learning workflows, data visualization dashboards, and front-end engineering.
+          </p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="filter-bar-wrapper reveal">
+          <div class="filter-tabs" role="tablist" aria-label="Project category filters">
+            <button class="filter-btn active" data-filter="all">All Projects (5)</button>
+            <button class="filter-btn" data-filter="ai">AI & Machine Learning</button>
+            <button class="filter-btn" data-filter="uiux">UI/UX Design</button>
+            <button class="filter-btn" data-filter="data">Data Visualization</button>
+            <button class="filter-btn" data-filter="web">Web Development</button>
+          </div>
+        </div>
+
+        <!-- Projects Bento Grid -->
+        <div class="projects-grid">
+
+          <!-- Project 1: Pinterest Replica UI (Figma) -->
+          <article class="project-card featured-card reveal" data-category="uiux">
+            <div class="project-media-wrapper">
+              <div class="project-badge-overlay">
+                <span class="project-type-tag">UI/UX & Prototyping</span>
+              </div>
+              <!-- Embedded prototype video preview -->
+              <video muted loop playsinline onmouseover="this.play()" onmouseout="this.pause()" poster="https://i.pinimg.com/736x/46/56/a2/4656a23e3bcf845f6e9739a62831887d.jpg">
+                <source src="WhatsApp Video 2025-06-29 at 15.46.52_c3af2208.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="project-body">
+              <div class="project-header-row">
+                <h3 class="project-title">Pinterest Replica UI & Design System</h3>
+                <a href="figma-pinterest.html" class="project-external-btn" title="View Project Case Study" aria-label="View Pinterest Case Study">
+                  ↗
+                </a>
+              </div>
+              <p class="project-description">
+                Comprehensive recreation and modernization of Pinterest's core interface. Built using Figma Auto Layout, reusable design tokens, variable components, and micro-interactions for seamless navigation and pin management.
+              </p>
+              <div class="project-meta-pills">
+                <span class="meta-pill">Figma</span>
+                <span class="meta-pill">Auto Layout</span>
+                <span class="meta-pill">Interactive Prototype</span>
+                <span class="meta-pill">Component Architecture</span>
+              </div>
+              <div class="project-footer-row">
+                <a href="figma-pinterest.html" class="project-link-action">
+                  <span>View Full Case Study</span>
+                  <span>→</span>
+                </a>
+                <span class="project-status-note">Prototype Tested</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Superstore Tableau Dashboard -->
+          <article class="project-card standard-card reveal reveal-delay-1" data-category="data">
+            <div class="project-media-wrapper">
+              <div class="project-badge-overlay">
+                <span class="project-type-tag">Business Intelligence</span>
+              </div>
+              <img src="WhatsApp Image 2025-06-29 at 13.07.59_c32446cb.jpg" alt="Tableau Superstore Dashboard" loading="lazy" />
+            </div>
+            <div class="project-body">
+              <div class="project-header-row">
+                <h3 class="project-title">Superstore Retail Analytics Sheets</h3>
+                <a href="tableau.html" class="project-external-btn" title="View Tableau Case Study" aria-label="View Tableau Case Study">
+                  ↗
+                </a>
+              </div>
+              <p class="project-description">
+                Interactive retail data intelligence dashboards built in Tableau. Features regional profit margins, category hierarchy trees, time-series forecasting, and granular interactive filtering.
+              </p>
+              <div class="project-meta-pills">
+                <span class="meta-pill">Tableau</span>
+                <span class="meta-pill">Data Storytelling</span>
+                <span class="meta-pill">Retail KPI Analytics</span>
+                <span class="meta-pill">Sales Heatmap</span>
+              </div>
+              <div class="project-footer-row">
+                <a href="tableau.html" class="project-link-action">
+                  <span>Explore Dashboard</span>
+                  <span>→</span>
+                </a>
+                <span class="project-status-note">Interactive KPIs</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Netflix Data Dashboard (Canva) -->
+          <article class="project-card standard-card reveal reveal-delay-2" data-category="uiux data">
+            <div class="project-media-wrapper">
+              <div class="project-badge-overlay">
+                <span class="project-type-tag">Information Design</span>
+              </div>
+              <img src="Netflix Show Dashboard.png" alt="Netflix Show Dashboard in Canva" loading="lazy" />
+            </div>
+            <div class="project-body">
+              <div class="project-header-row">
+                <h3 class="project-title">Netflix Content Velocity Dashboard</h3>
+                <a href="canva-dashboard.html" class="project-external-btn" title="View Netflix Dashboard" aria-label="View Netflix Dashboard">
+                  ↗
+                </a>
+              </div>
+              <p class="project-description">
+                Visualizing streaming patterns, release year trends, content type distribution (Movies vs TV Shows), and genre ratings using Canva's advanced visual hierarchy and grid layout system.
+              </p>
+              <div class="project-meta-pills">
+                <span class="meta-pill">Canva UI</span>
+                <span class="meta-pill">Visual Hierarchy</span>
+                <span class="meta-pill">Data Infographic</span>
+                <span class="meta-pill">Streaming Insights</span>
+              </div>
+              <div class="project-footer-row">
+                <a href="canva-dashboard.html" class="project-link-action">
+                  <span>Inspect Visuals</span>
+                  <span>→</span>
+                </a>
+                <span class="project-status-note">Storytelling</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Plant Disease & Weather ML System (Python) -->
+          <article class="project-card featured-card reveal reveal-delay-1" data-category="ai">
+            <div class="project-media-wrapper">
+              <div class="project-badge-overlay">
+                <span class="project-type-tag">Deep Learning & Vision</span>
+              </div>
+              <video muted loop playsinline onmouseover="this.play()" onmouseout="this.pause()" poster="bwa.png">
+                <source src="WhatsApp Video 2025-06-29 at 15.46.33_113bd6e9.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="project-body">
+              <div class="project-header-row">
+                <h3 class="project-title">Plant Disease CNN & Real-Time Weather ML</h3>
+                <a href="python-projects.html" class="project-external-btn" title="View Python Projects" aria-label="View Python Projects">
+                  ↗
+                </a>
+              </div>
+              <p class="project-description">
+                A dual Python software suite: (1) Deep Convolutional Neural Network trained on leaf image datasets for automated plant disease diagnosis with OpenCV preprocessing. (2) Live weather analytics application powered by REST API telemetry.
+              </p>
+              <div class="project-meta-pills">
+                <span class="meta-pill">Python</span>
+                <span class="meta-pill">TensorFlow / Keras</span>
+                <span class="meta-pill">OpenCV</span>
+                <span class="meta-pill">REST APIs</span>
+                <span class="meta-pill">CNN Architecture</span>
+              </div>
+              <div class="project-footer-row">
+                <a href="python-projects.html" class="project-link-action">
+                  <span>View Project Specs</span>
+                  <span>→</span>
+                </a>
+                <span class="project-status-note">95%+ Test Accuracy</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5: Movie Reviews Web Application (Frontend) -->
+          <article class="project-card wide-card reveal reveal-delay-2" data-category="web">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: center;">
+              <div class="project-media-wrapper" style="height: 100%; min-height: 280px; border-radius: 14px; border: 1px solid var(--border-subtle);">
+                <div class="project-badge-overlay">
+                  <span class="project-type-tag">Web Engineering</span>
+                </div>
+                <img src="Screenshot 2025-06-29 131340.png" alt="Movie Reviews Web App Screenshot" loading="lazy" />
+              </div>
+              <div class="project-body" style="padding: 24px 12px;">
+                <div class="project-header-row">
+                  <h3 class="project-title">Interactive Movie Review & Catalog Web App</h3>
+                  <a href="frontend-projects.html" class="project-external-btn" title="View Frontend Project" aria-label="View Frontend Project">
+                    ↗
+                  </a>
+                </div>
+                <p class="project-description">
+                  A dynamic, responsive web application engineered with HTML5, Vanilla CSS, and modern JavaScript. Features movie listings, star rating calculation, interactive card flips, and client-side form validation for user reviews.
+                </p>
+                <div class="project-meta-pills">
+                  <span class="meta-pill">HTML5 / CSS3</span>
+                  <span class="meta-pill">Vanilla JavaScript</span>
+                  <span class="meta-pill">Dynamic DOM</span>
+                  <span class="meta-pill">Live Review State</span>
+                </div>
+                <div class="project-footer-row" style="margin-top: 20px;">
+                  <div style="display: flex; gap: 16px;">
+                    <a href="frontend-projects.html" class="project-link-action">
+                      <span>Case Study Overview</span>
+                      <span>→</span>
+                    </a>
+                    <a href="projects/Miniproject.html" target="_blank" class="project-link-action" style="color: var(--accent-cyan);">
+                      <span>Launch Live Demo ↗</span>
+                    </a>
+                  </div>
+                  <span class="project-status-note">Client-Side Architecture</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Experience & Educational Journey
+         ========================================================================== -->
+    <section class="section journey-section" id="journey">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">03 // Track Record</span>
+          <h2 class="section-title">Experience & Academic Journey</h2>
+          <p class="section-subtitle">
+            A chronological timeline of hands-on data science internships, machine learning research, and academic achievements.
+          </p>
+        </div>
+
+        <div class="journey-grid">
+          <!-- Column 1: Professional Internships -->
+          <div class="timeline-column reveal">
+            <h3 class="timeline-column-title">
+              <span>💼</span>
+              <span>Professional Experiences</span>
+            </h3>
+
+            <div class="timeline-list">
+              <!-- Internship 1: Zaalima Dev -->
+              <div class="timeline-item">
+                <span class="timeline-bullet"></span>
+                <div class="timeline-card">
+                  <span class="timeline-date">Dec 2025 – Feb 2026</span>
+                  <h4 class="timeline-role">Data Science & Machine Learning Intern</h4>
+                  <span class="timeline-company">Zaalima Development Pvt. Ltd.</span>
+                  <p class="timeline-desc">
+                    Engineered an XGBoost-based predictive maintenance model for industrial machinery reliability. Architected and containerized a Dockerized OCR-NLP legal document extraction system, boosting parsing throughput.
+                  </p>
+                  <div class="timeline-tags">
+                    <span class="timeline-tag">XGBoost</span>
+                    <span class="timeline-tag">Docker</span>
+                    <span class="timeline-tag">OCR & NLP</span>
+                    <span class="timeline-tag">Predictive Modeling</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Internship 2: Codec Tech -->
+              <div class="timeline-item">
+                <span class="timeline-bullet"></span>
+                <div class="timeline-card">
+                  <span class="timeline-date">Jun 2025 – Jul 2025</span>
+                  <h4 class="timeline-role">Artificial Intelligence Intern</h4>
+                  <span class="timeline-company">Codec Technologies</span>
+                  <p class="timeline-desc">
+                    Developed a sentiment-based recommendation engine for user interactions. Formulated preprocessing scripts and optimized deployment pipeline for low-latency inference.
+                  </p>
+                  <div class="timeline-tags">
+                    <span class="timeline-tag">Sentiment Analysis</span>
+                    <span class="timeline-tag">Recommender Systems</span>
+                    <span class="timeline-tag">Inference Pipelines</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Internship 3: Nativeva -->
+              <div class="timeline-item">
+                <span class="timeline-bullet"></span>
+                <div class="timeline-card">
+                  <span class="timeline-date">Jul 2024 – Aug 2024</span>
+                  <h4 class="timeline-role">Data Science Intern</h4>
+                  <span class="timeline-company">Nativeva Internship Program</span>
+                  <p class="timeline-desc">
+                    Constructed a custom Convolutional Neural Network (CNN) for potato disease classification from agricultural imagery, ensuring optimized model weights and high classification accuracy.
+                  </p>
+                  <div class="timeline-tags">
+                    <span class="timeline-tag">Deep Learning</span>
+                    <span class="timeline-tag">CNN</span>
+                    <span class="timeline-tag">Computer Vision</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Internship 4: Corizo -->
+              <div class="timeline-item">
+                <span class="timeline-bullet"></span>
+                <div class="timeline-card">
+                  <span class="timeline-date">Oct 2023 – Nov 2023</span>
+                  <h4 class="timeline-role">Human Resources & Analytics Intern</h4>
+                  <span class="timeline-company">Corizo – Empowering Tomorrow's Leaders</span>
+                  <p class="timeline-desc">
+                    Facilitated talent acquisition, candidate onboarding workflows, and structured organizational HR analytics to identify operational bottlenecks and employee satisfaction indices.
+                  </p>
+                  <div class="timeline-tags">
+                    <span class="timeline-tag">People Analytics</span>
+                    <span class="timeline-tag">Talent Acquisition</span>
+                    <span class="timeline-tag">Operations</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: Education -->
+          <div class="timeline-column reveal reveal-delay-2">
+            <h3 class="timeline-column-title">
+              <span>🎓</span>
+              <span>Academic Education</span>
+            </h3>
+
+            <div class="timeline-list">
+              <!-- College -->
+              <div class="timeline-item">
+                <span class="timeline-bullet"></span>
+                <div class="timeline-card">
+                  <span class="timeline-date">2022 – 2026</span>
+                  <h4 class="timeline-role">Bachelor of Computer Science and Design</h4>
+                  <span class="timeline-company">SNS College of Engineering, Coimbatore</span>
+                  <p class="timeline-desc">
+                    Specialized curriculum integrating core Computer Science fundamentals (Data Structures, Algorithms, Machine Learning, Database Architecture) with Human-Computer Interaction, Design Thinking, and UI/UX Systems.
+                  </p>
+                  <div class="timeline-tags">
+                    <span class="timeline-tag">Design Thinking</span>
+                    <span class="timeline-tag">Algorithms</span>
+                    <span class="timeline-tag">HCI</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- HSC -->
+              <div class="timeline-item">
+                <span class="timeline-bullet"></span>
+                <div class="timeline-card">
+                  <span class="timeline-date">2020 – 2022</span>
+                  <h4 class="timeline-role">Higher Secondary Certificate (HSC) — 83%</h4>
+                  <span class="timeline-company">The Little Kingdom School – ISC</span>
+                  <p class="timeline-desc">
+                    Completed ISC curriculum with a focus on Mathematics, Science, and Computing, achieving distinction grade of 83%.
+                  </p>
+                </div>
+              </div>
+
+              <!-- SSLC -->
+              <div class="timeline-item">
+                <span class="timeline-bullet"></span>
+                <div class="timeline-card">
+                  <span class="timeline-date">2007 – 2020</span>
+                  <h4 class="timeline-role">Secondary School Certificate (SSLC) — 80.3%</h4>
+                  <span class="timeline-company">The Little Kingdom School – ICSE</span>
+                  <p class="timeline-desc">
+                    Strong foundational schooling with academic excellence across analytical sciences and arts.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Skills Matrix & Tech Stack (Interactive Bento)
+         ========================================================================== -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">04 // Core Competencies</span>
+          <h2 class="section-title">Skills & Technological Arsenal</h2>
+          <p class="section-subtitle">
+            A comprehensive overview of frameworks, languages, creative tools, and methodologies I leverage daily.
+          </p>
+        </div>
+
+        <div class="skills-bento-grid">
+          <!-- Category 1: AI & Machine Learning -->
+          <div class="skill-category-card reveal">
+            <div class="skill-card-icon" style="background: rgba(99, 102, 241, 0.15); color: #818cf8;">🧠</div>
+            <h3 class="skill-card-title">AI & Machine Learning</h3>
+            <p class="skill-card-desc">Deep neural networks, computer vision, document intelligence, and predictive models.</p>
+            <div class="skill-chips-cloud">
+              <span class="skill-chip">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="Python" /> Python
+              </span>
+              <span class="skill-chip">TensorFlow / Keras</span>
+              <span class="skill-chip">OpenCV</span>
+              <span class="skill-chip">XGBoost</span>
+              <span class="skill-chip">Scikit-Learn</span>
+              <span class="skill-chip">Docker</span>
+              <span class="skill-chip">OCR & NLP</span>
+              <span class="skill-chip">Generative AI</span>
+            </div>
+          </div>
+
+          <!-- Category 2: UI/UX & Design -->
+          <div class="skill-category-card reveal reveal-delay-1">
+            <div class="skill-card-icon" style="background: rgba(245, 158, 11, 0.15); color: var(--accent-amber);">🎨</div>
+            <h3 class="skill-card-title">UI/UX & Product Design</h3>
+            <p class="skill-card-desc">User-centered interfaces, interaction design, micro-animations, and visual systems.</p>
+            <div class="skill-chips-cloud">
+              <span class="skill-chip">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="Figma" /> Figma
+              </span>
+              <span class="skill-chip">
+                <img src="https://tse2.mm.bing.net/th/id/OIP.GEmKEiw9TRKIgGwJK0F53gHaHa" alt="Canva" /> Canva
+              </span>
+              <span class="skill-chip">Design Systems</span>
+              <span class="skill-chip">Auto Layout</span>
+              <span class="skill-chip">Wireframing</span>
+              <span class="skill-chip">Prototyping</span>
+              <span class="skill-chip">Visual Hierarchy</span>
+              <span class="skill-chip">Information Architecture</span>
+            </div>
+          </div>
+
+          <!-- Category 3: Data Science & Analytics -->
+          <div class="skill-category-card reveal reveal-delay-2">
+            <div class="skill-card-icon" style="background: rgba(6, 182, 212, 0.15); color: #38bdf8;">📊</div>
+            <h3 class="skill-card-title">Data Science & Analytics</h3>
+            <p class="skill-card-desc">Exploratory data analysis, business intelligence, KPI synthesis, and data storytelling.</p>
+            <div class="skill-chips-cloud">
+              <span class="skill-chip">
+                <img src="https://tse2.mm.bing.net/th/id/OIP.S0kV-FmzjzwA1bR0rAJAagAAAA" alt="Tableau" /> Tableau
+              </span>
+              <span class="skill-chip">SQL</span>
+              <span class="skill-chip">Pandas</span>
+              <span class="skill-chip">NumPy</span>
+              <span class="skill-chip">Data Storytelling</span>
+              <span class="skill-chip">Jupyter Notebooks</span>
+              <span class="skill-chip">KPI Modeling</span>
+            </div>
+          </div>
+
+          <!-- Category 4: Software & Web Development -->
+          <div class="skill-category-card reveal reveal-delay-3">
+            <div class="skill-card-icon" style="background: rgba(16, 185, 129, 0.15); color: #34d399;">💻</div>
+            <h3 class="skill-card-title">Web & Engineering</h3>
+            <p class="skill-card-desc">Performant web interfaces, responsive layouts, modular codebases, and clean architecture.</p>
+            <div class="skill-chips-cloud">
+              <span class="skill-chip">HTML5</span>
+              <span class="skill-chip">CSS3 / Flex / Grid</span>
+              <span class="skill-chip">Modern JavaScript</span>
+              <span class="skill-chip">REST APIs</span>
+              <span class="skill-chip">Git & GitHub</span>
+              <span class="skill-chip">Responsive Web</span>
+              <span class="skill-chip">DOM Manipulation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Certifications & Credentials (Lightbox Enabled)
+         ========================================================================== -->
+    <section class="section certifications-section" id="certifications">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag emerald">05 // Verified Credentials</span>
+          <h2 class="section-title">Industry Certifications</h2>
+          <p class="section-subtitle">
+            Accredited qualifications verified by global technology leaders in cloud intelligence and data science.
+          </p>
+        </div>
+
+        <div class="certs-grid">
+          <!-- Cert 1: Microsoft Azure AI Fundamentals -->
+          <div class="cert-card-v2 reveal" onclick="openCertModal('Microsoft Azure AI Fundamentals', 'MicrsoftAzureAI_Certificate.pdf', true)">
+            <div>
+              <div class="cert-header">
+                <div class="cert-logo-box">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg" alt="Microsoft Azure" />
+                </div>
+                <span class="cert-verified-badge">✔ Verified</span>
+              </div>
+              <h3>Microsoft Azure AI Fundamentals</h3>
+              <p class="cert-issuer">Microsoft (AI-900)</p>
+            </div>
+            <div class="cert-footer-row">
+              <span class="cert-view-link">View Certificate PDF ↗</span>
+              <span>Official Credential</span>
+            </div>
+          </div>
+
+          <!-- Cert 2: AWS Certified AI Practitioner -->
+          <div class="cert-card-v2 reveal reveal-delay-1" onclick="openCertModal('AWS Certified AI Practitioner', 'AWS Certified AI Practitioner certificate.pdf', true)">
+            <div>
+              <div class="cert-header">
+                <div class="cert-logo-box">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Web Services" />
+                </div>
+                <span class="cert-verified-badge">✔ Verified</span>
+              </div>
+              <h3>AWS Certified AI Practitioner</h3>
+              <p class="cert-issuer">Amazon Web Services</p>
+            </div>
+            <div class="cert-footer-row">
+              <span class="cert-view-link">View Certificate PDF ↗</span>
+              <span>2026 – 2029</span>
+            </div>
+          </div>
+
+          <!-- Cert 3: Infosys Springboard - Generative AI Unleashing -->
+          <div class="cert-card-v2 reveal reveal-delay-2" onclick="openCertModal('Generative AI Unleashing — Infosys Springboard', 'WhatsApp Image 2026-04-27 at 6.45.40 PM.jpeg', false)">
+            <div>
+              <div class="cert-header">
+                <div class="cert-logo-box">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Infosys_logo.svg" alt="Infosys" />
+                </div>
+                <span class="cert-verified-badge">✔ Verified</span>
+              </div>
+              <h3>Generative AI Unleashing</h3>
+              <p class="cert-issuer">Infosys Springboard</p>
+            </div>
+            <div class="cert-footer-row">
+              <span class="cert-view-link">Preview Certificate ↗</span>
+              <span>July 2025</span>
+            </div>
+          </div>
+
+          <!-- Cert 4: Infosys Springboard - Python Data Structures -->
+          <div class="cert-card-v2 reveal reveal-delay-3" onclick="openCertModal('Python Data Structures and Algorithms — Infosys Springboard', 'WhatsApp Image 2026-04-27 at 6.45.20 PM.jpeg', false)">
+            <div>
+              <div class="cert-header">
+                <div class="cert-logo-box">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Infosys_logo.svg" alt="Infosys" />
+                </div>
+                <span class="cert-verified-badge">✔ Verified</span>
+              </div>
+              <h3>Python Data Structures & Algorithms</h3>
+              <p class="cert-issuer">Infosys Springboard</p>
+            </div>
+            <div class="cert-footer-row">
+              <span class="cert-view-link">Preview Certificate ↗</span>
+              <span>July 2025</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional Cert Row -->
+        <div style="margin-top: 24px;" class="reveal">
+          <div class="cert-card-v2" onclick="openCertModal('Python & SQL for Data Science — Scaler Academy', 'WhatsApp Image 2026-04-28 at 4.17.53 PM.jpeg', false)" style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; padding: 20px 28px;">
+            <div style="display: flex; align-items: center; gap: 20px;">
+              <div class="cert-logo-box">
+                <img src="https://th.bing.com/th/id/OIP.Dvw7O1Gno3sxp9Wjmg-r6gHaEK?w=329&h=185&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" alt="Scaler Academy" />
+              </div>
+              <div>
+                <h3 style="margin-bottom: 2px;">Python & SQL for Data Science</h3>
+                <p class="cert-issuer" style="margin-bottom: 0;">Scaler Topics • 65 Video Tutorials, 8 Modules, 8 Challenges Completed</p>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 16px;">
+              <span class="cert-verified-badge">✔ Verified</span>
+              <span class="cert-view-link">Preview ↗</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Creative Dimension Spotlight: The Artist's Canvas
+         ========================================================================== -->
+    <section class="section creative-spotlight-section">
+      <div class="container">
+        <div class="creative-spotlight-card reveal">
+          <div>
+            <span class="section-tag" style="margin-bottom: 16px;">🎨 Creative Dimension</span>
+            <h2 style="font-family: var(--font-display); font-size: clamp(1.8rem, 2.5vw, 2.4rem); color: #fff; margin-bottom: 16px;">
+              The Artistic Catalyst Behind My Code
+            </h2>
+            <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.7; margin-bottom: 24px;">
+              Great software isn't just about zero runtime errors; it's about delight, intention, and feeling. My passion for painting and visual arts infuses every line of CSS, every user flow, and every data visualization with intentional balance and visual harmony.
+            </p>
+            <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+              <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border-subtle); border-radius: 12px; padding: 12px 18px;">
+                <span style="color: var(--accent-amber-light); font-weight: 700;">Color Harmony</span>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">Dynamic contrast & tone balance</p>
+              </div>
+              <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border-subtle); border-radius: 12px; padding: 12px 18px;">
+                <span style="color: #a5b4fc; font-weight: 700;">Human Empathy</span>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">Intuitive ergonomics in UI</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="creative-img-frame">
+            <img src="WhatsApp Image 2025-06-29 at 00.36.09_4c826ff0.jpg" alt="Vibrant Canvas Painting by Sathana" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Contact & Collaboration Section
+         ========================================================================== -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="contact-card reveal">
+          <!-- Direct Contact Column -->
+          <div class="contact-direct-info">
+            <span class="section-tag blue">06 // Initiate Contact</span>
+            <h2 class="contact-title">Let’s Build Something Remarkable Together.</h2>
+            <p class="contact-subtitle">
+              Whether you have an upcoming AI project, full-time engineering opportunity, design collaboration, or simply want to connect — my inbox is always open.
+            </p>
+
+            <div class="contact-methods-list">
+              <a href="mailto:smsathana12@gmail.com" class="contact-method-item">
+                <div class="method-icon">✉</div>
+                <div>
+                  <div class="method-label">Direct Email</div>
+                  <div class="method-value">smsathana12@gmail.com</div>
+                </div>
+              </a>
+
+              <a href="tel:+919442612804" class="contact-method-item">
+                <div class="method-icon">📞</div>
+                <div>
+                  <div class="method-label">Direct Phone / WhatsApp</div>
+                  <div class="method-value">+91 94426 12804</div>
+                </div>
+              </a>
+
+              <div class="contact-method-item">
+                <div class="method-icon">📍</div>
+                <div>
+                  <div class="method-label">Location Base</div>
+                  <div class="method-value">Coimbatore, Tamil Nadu, India (Open to Remote / Relocation)</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Links Row -->
+            <div class="social-links-row">
+              <a href="https://www.linkedin.com/in/sathana-sm" target="_blank" rel="noopener noreferrer" class="social-btn">
+                <span>LinkedIn</span>
+                <span>↗</span>
+              </a>
+              <a href="https://github.com/Sathana-jeehelloji" target="_blank" rel="noopener noreferrer" class="social-btn">
+                <span>GitHub</span>
+                <span>↗</span>
+              </a>
+              <a href="https://pin.it/7EixmmPAc" target="_blank" rel="noopener noreferrer" class="social-btn">
+                <span>Pinterest</span>
+                <span>↗</span>
+              </a>
+              <button class="social-btn copy-email-btn" type="button" title="Copy email address to clipboard">
+                <span>Copy Email</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Quick Interactive Message Box -->
+          <div class="contact-form-box">
+            <h3 style="font-family: var(--font-display); font-size: 1.3rem; color: #fff; margin-bottom: 8px;">
+              Send a Quick Message
+            </h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 24px;">
+              Leave your details below and I will get back to you promptly.
+            </p>
+
+            <form id="contactForm" action="mailto:smsathana12@gmail.com" method="post" enctype="text/plain">
+              <div class="form-group">
+                <label for="senderName" class="form-label">Your Name</label>
+                <input type="text" id="senderName" name="name" class="form-input" placeholder="e.g. Maya Lin" required />
+              </div>
+
+              <div class="form-group">
+                <label for="senderEmail" class="form-label">Your Email</label>
+                <input type="email" id="senderEmail" name="email" class="form-input" placeholder="e.g. maya@example.com" required />
+              </div>
+
+              <div class="form-group">
+                <label for="senderMessage" class="form-label">Message / Project Inquiry</label>
+                <textarea id="senderMessage" name="message" class="form-textarea" placeholder="Hello Sathana, I came across your portfolio and wanted to discuss..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-glow form-submit-btn">
+                <span>Send Message</span>
+                <span>→</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       Site Footer
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-credits">
+        <span>&copy; 2026 <strong>Sathana S M</strong>. Built with precision, design principles, and code.</span>
+      </div>
+      <div class="footer-nav">
+        <a href="#about">About</a>
+        <a href="#works">Works</a>
+        <a href="#journey">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <a href="SathanaSM_Resume (6).pdf (2) (1).pdf" target="_blank">Resume PDF</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       Certificate / Media Lightbox Modal
+       ========================================================================== -->
+  <div class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-content">
+      <button class="modal-close-btn" aria-label="Close Preview Modal">✕</button>
+      <h3 id="modalTitle" class="modal-title" style="font-family: var(--font-display); font-size: 1.25rem; color: #fff;">Certificate Credential</h3>
+      <div class="modal-body"></div>
     </div>
   </div>
 
-</section>
-  
-  </section>
-
-  <section class="contact" id="contact">
-    <h2 class="section-title">Contact</h2>
-    <p>📧 smsathana12@gmail.com | 📞 +91 9442612804 </p>
-    <p>
-      <a href="https://www.linkedin.com/in/sathana-sm">LinkedIn</a> |
-      <a href="https://github.com/Sathana-jeehelloji">GitHub</a> |
-      <a href="https://pin.it/7EixmmPAc">Pinterest</a>
-    </p>
-  </section>
-
-  <footer>
-    &copy; 2025 Sathana. All rights reserved.
-  </footer>
+  <!-- JavaScript Engine -->
+  <script src="script.js"></script>
 </body>
 </html>

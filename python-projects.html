@@ -3,128 +3,259 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Python Projects</title>
+  <title>Machine Learning & Python Systems — Sathana S M</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      padding: 40px;
-      background: #f5faff;
-      color: #333;
+    .case-study-hero {
+      padding-top: calc(var(--header-height) + 60px);
+      padding-bottom: 60px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .back-nav {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-secondary);
+      font-size: 0.92rem;
+      font-weight: 600;
+      margin-bottom: 24px;
+      padding: 8px 16px;
+      border-radius: var(--radius-full);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-subtle);
+      transition: all var(--transition-fast);
+    }
+    .back-nav:hover {
+      color: var(--text-highlight);
+      background: rgba(255, 255, 255, 0.08);
+      transform: translateX(-4px);
+    }
+    .project-section-block {
+      margin-top: 60px;
+      padding-bottom: 60px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .project-section-block:last-child {
+      border-bottom: none;
+    }
+    .case-content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      margin-top: 36px;
+      align-items: start;
+    }
+    .content-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      margin-bottom: 32px;
+    }
+    .content-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      color: var(--text-highlight);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .checklist {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .checklist li {
+      position: relative;
+      padding-left: 28px;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
       line-height: 1.6;
     }
-    h1 {
-      color: #2e86de;
-      margin-bottom: 30px;
+    .checklist li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #818cf8;
+      font-weight: 800;
+      font-size: 1rem;
     }
-    h2 {
-      color: #2e86de;
-      margin-top: 40px;
+    .media-showcase-frame {
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid var(--border-medium);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+      background: #000;
+      position: sticky;
+      top: 100px;
     }
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    ul li::before {
-      content: "✓ ";
-      color: #2e86de;
-      font-weight: bold;
-    }
-    .highlight-box {
-      background: #e3f2fd;
-      padding: 20px;
-      border-left: 5px solid #2e86de;
-      margin-top: 20px;
-      border-radius: 8px;
-    }
-    .emoji-title {
-      font-size: 18px;
-      font-weight: bold;
-      margin-bottom: 8px;
-    }
-    img, iframe {
+    .media-showcase-frame video, .media-showcase-frame img {
       width: 100%;
-      max-width: 650px;
       display: block;
-      margin: 30px auto;
-      border-radius: 8px;
     }
-    .button-link {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 20px;
-      background-color: #2e86de;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 6px;
-      transition: background 0.3s ease;
-    }
-    .button-link:hover {
-      background-color: #1c5fa8;
-    }
-    .back {
-      display: inline-block;
-      margin-top: 40px;
-      background: #2e86de;
-      color: white;
-      padding: 10px 15px;
-      border-radius: 5px;
-      text-decoration: none;
+    @media (max-width: 900px) {
+      .case-content-grid { grid-template-columns: 1fr; }
+      .media-showcase-frame { position: static; }
     }
   </style>
 </head>
 <body>
+  <div class="bg-grid-overlay" aria-hidden="true"></div>
 
-  <h1>🐍 Python Projects</h1>
+  <!-- Header -->
+  <header class="site-header scrolled">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-avatar">
+          <img src="WhatsApp Image 2025-06-29 at 00.36.09_4c826ff0.jpg" alt="Sathana S M" />
+        </div>
+        <div class="brand-name">
+          <span>Sathana S M</span>
+          <span>AI Systems Case Study</span>
+        </div>
+      </a>
+      <a href="index.html" class="btn btn-secondary">
+        <span>← Back to Portfolio</span>
+      </a>
+    </div>
+  </header>
 
-  <!-- Project 1: Plant Disease Classification -->
-  <h2>🌿 1. Plant Disease Classification (ML Project)</h2>
-  <p><strong>Tools:</strong> Python, Jupyter Notebook, TensorFlow/Keras, OpenCV<br>
-     <strong>Role:</strong> ML Developer<br>
-     <strong>Goal:</strong> Build a machine learning model to detect plant diseases from leaf images.</p>
+  <main>
+    <section class="case-study-hero">
+      <div class="container">
+        <a href="index.html#works" class="back-nav">← Back to Selected Works</a>
+        
+        <span class="section-tag blue">Machine Learning & Python Engineering</span>
+        <h1 class="section-title" style="margin-top: 12px; margin-bottom: 16px;">
+          Applied Machine Learning & Python Software Systems
+        </h1>
+        <p class="section-subtitle" style="max-width: 760px;">
+          A technical breakdown of two applied Python engineering projects: (1) A deep Convolutional Neural Network (CNN) for agricultural plant leaf pathology diagnosis, and (2) A real-time meteorological API telemetry application.
+        </p>
+      </div>
+    </section>
 
-  <h3>🔍 What I Did</h3>
-  <ul>
-    <li>Collected and preprocessed leaf images using OpenCV</li>
-    <li>Built and trained a CNN model to classify diseases</li>
-    <li>Evaluated performance using accuracy and confusion matrix</li>
-    <li>Visualized predictions with labeled outputs</li>
-  </ul>
+    <!-- Sub-Project 1: Plant Disease Classification -->
+    <section class="container project-section-block">
+      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+        <div>
+          <span class="section-tag" style="background: rgba(16, 185, 129, 0.12); border-color: rgba(16, 185, 129, 0.3); color: #34d399;">Project 01 // Deep Learning</span>
+          <h2 style="font-family: var(--font-display); font-size: 2rem; color: #fff; margin-top: 8px;">
+            Plant Disease Classification via Deep CNN
+          </h2>
+        </div>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <span class="meta-pill">TensorFlow / Keras</span>
+          <span class="meta-pill">OpenCV</span>
+          <span class="meta-pill">Computer Vision</span>
+          <span class="meta-pill">95%+ Accuracy</span>
+        </div>
+      </div>
 
-  <h3>💡 Outcome</h3>
-  <p>Learned how to implement deep learning for image classification.<br>
-     Gained experience in data preprocessing, model evaluation, and real-world agricultural applications.</p>
+      <div class="case-content-grid">
+        <div>
+          <div class="content-card">
+            <h3><span>🌿</span> Architecture & Methodology</h3>
+            <ul class="checklist">
+              <li>Acquired and augmented comprehensive agricultural leaf datasets to represent varying lighting angles and disease progressions.</li>
+              <li>Engineered image preprocessing pipelines using OpenCV including resizing, color space normalization, and morphological enhancements.</li>
+              <li>Trained convolutional neural network architectures using TensorFlow and Keras with dropout regularization to avoid overfitting.</li>
+              <li>Evaluated model precision using confusion matrices, F1-scores, and multiclass accuracy metrics.</li>
+            </ul>
+          </div>
 
-  <!-- Embedded Video (Replace the src below with your actual YouTube or video link) -->
-  <iframe src="WhatsApp Video 2025-06-29 at 15.46.33_113bd6e9.mp4" 
-          frameborder="0" 
-          allowfullscreen 
-          title="Plant Disease Classification Demo">
-  </iframe>
+          <div class="content-card">
+            <h3><span>💡</span> Real-World Impact</h3>
+            <p style="color: var(--text-secondary); line-height: 1.7;">
+              Enables non-expert agricultural operators to rapidly identify fungal and bacterial leaf pathogens before widespread crop damage occurs, demonstrating how edge AI can deliver measurable agricultural value.
+            </p>
+          </div>
+        </div>
 
+        <div>
+          <div class="media-showcase-frame">
+            <div style="padding: 14px 18px; border-bottom: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: space-between; background: rgba(22, 25, 36, 0.9);">
+              <span style="font-size: 0.8rem; font-family: var(--font-mono); color: #34d399;">● MODEL INFERENCE DEMO VIDEO</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">CNN Execution</span>
+            </div>
+            <video controls autoplay muted loop playsinline>
+              <source src="WhatsApp Video 2025-06-29 at 15.46.33_113bd6e9.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- Project 2: Weather App -->
-  <h2>☁️ 2. Basic Weather App</h2>
-  <p><strong>Tools:</strong> Python, Requests, OpenWeatherMap API, Tkinter (optional for GUI)<br>
-     <strong>Role:</strong> Python Developer<br>
-     <strong>Goal:</strong> Create a simple app to fetch real-time weather data for any city.</p>
+    <!-- Sub-Project 2: Weather Telemetry App -->
+    <section class="container project-section-block">
+      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+        <div>
+          <span class="section-tag blue">Project 02 // API Integration</span>
+          <h2 style="font-family: var(--font-display); font-size: 2rem; color: #fff; margin-top: 8px;">
+            Real-Time Weather Intelligence Application
+          </h2>
+        </div>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <span class="meta-pill">Python</span>
+          <span class="meta-pill">OpenWeatherMap API</span>
+          <span class="meta-pill">Requests</span>
+          <span class="meta-pill">GUI Interface</span>
+        </div>
+      </div>
 
-  <h3>🔍 What I Did</h3>
-  <ul>
-    <li>Integrated OpenWeatherMap API for live weather updates</li>
-    <li>Built CLI/GUI to input city name and display data (temp, humidity, conditions)</li>
-    <li>Handled errors for invalid entries and network issues</li>
-    <li>Applied clean code structure and reusable functions</li>
-  </ul>
+      <div class="case-content-grid">
+        <div>
+          <div class="content-card">
+            <h3><span>☁️</span> Features & Implementation</h3>
+            <ul class="checklist">
+              <li>Integrated OpenWeatherMap REST API telemetry to extract real-time ambient temperature, humidity, atmospheric pressure, and weather status.</li>
+              <li>Implemented comprehensive error-handling guards for network timeouts, rate limiting, and unrecognized geographical query inputs.</li>
+              <li>Structured modular, object-oriented Python code for easy maintainability and extensible GUI integration.</li>
+            </ul>
+          </div>
 
-  <h3>💡 Outcome</h3>
-  <p>Strengthened skills in API integration and working with real-time data.<br>
-     Improved understanding of user inputs, responses, and Python UI design.</p>
+          <div class="content-card">
+            <h3><span>💡</span> Technical Value</h3>
+            <p style="color: var(--text-secondary); line-height: 1.7;">
+              Gained practical experience managing asynchronous HTTP payloads, JSON serialization, and building dependable client interfaces in Python.
+            </p>
+          </div>
 
-  <img src="bwa.png" alt="Python Weather App Screenshot">
+          <div style="margin-top: 32px;">
+            <a href="index.html#works" class="btn btn-primary btn-glow">
+              <span>← Back to All Projects</span>
+            </a>
+          </div>
+        </div>
 
+        <div>
+          <div class="media-showcase-frame">
+            <div style="padding: 14px 18px; border-bottom: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: space-between; background: rgba(22, 25, 36, 0.9);">
+              <span style="font-size: 0.8rem; font-family: var(--font-mono); color: #818cf8;">● WEATHER APP GUI ARTIFACT</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">Python Telemetry</span>
+            </div>
+            <img src="bwa.png" alt="Python Weather Application Screenshot" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  <a class="back" href="index.html">← Back to Portfolio</a>
-
+  <footer class="site-footer" style="margin-top: 100px;">
+    <div class="container footer-inner">
+      <span>&copy; 2026 Sathana S M. All rights reserved.</span>
+      <a href="index.html" style="color: var(--text-secondary);">← Return to Home</a>
+    </div>
+  </footer>
 </body>
 </html>

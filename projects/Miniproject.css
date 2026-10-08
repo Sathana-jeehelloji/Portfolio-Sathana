@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -6,67 +8,139 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+    background-color: #0c0e14;
+    color: #e2e8f0;
+    line-height: 1.6;
 }
 
 .navbar {
     position: fixed;
+    top: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    padding: 10px 0;
+    background: rgba(12, 14, 20, 0.85);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 16px 24px;
     z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-brand span {
+    color: #f59e0b;
 }
 
 .navbar ul {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    gap: 24px;
     list-style: none;
 }
 
-.navbar ul li {
-    margin: 0 15px;
+.navbar ul li a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 500;
+    transition: color 0.2s;
 }
 
-.navbar ul li a {
-    color: white;
+.navbar ul li a:hover {
+    color: #ffffff;
+}
+
+.back-to-portfolio {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border-radius: 9999px;
+    background: rgba(245, 158, 11, 0.15);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    color: #fbbf24;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.back-to-portfolio:hover {
+    background: #f59e0b;
+    color: #0c0e14;
+    transform: translateY(-2px);
 }
 
 .header {
-    height: 150px;
-    background: #333;
+    padding-top: 140px;
+    padding-bottom: 60px;
+    background: radial-gradient(circle at 50% 30%, rgba(245, 158, 11, 0.1) 0%, transparent 60%);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: white;
-    font-size: 24px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.header h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.03em;
+    margin-bottom: 12px;
+}
+
+.header p {
+    color: #94a3b8;
+    font-size: 1.05rem;
+    max-width: 580px;
 }
 
 .container {
-    padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 24px;
     text-align: center;
+}
+
+.container h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 36px;
 }
 
 .reviews-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
     justify-content: center;
-    margin-top: 20px;
 }
 
 .flip-card {
-    perspective: 1000px;
+    perspective: 1200px;
 }
 
 .flip-card-inner {
     position: relative;
     width: 100%;
-    height: 350px;
+    height: 420px;
     transform-style: preserve-3d;
-    transition: transform 0.6s;
+    transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
 }
 
 .flip-card:hover .flip-card-inner {
@@ -79,49 +153,116 @@ body {
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background: white;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    overflow: hidden;
 }
 
 .flip-card-front {
-    overflow: hidden;
+    background: #141721;
 }
 
 .flip-card-front img {
     width: 100%;
-    height: 200px;
+    height: 290px;
     object-fit: cover;
 }
 
 .review-content {
-    padding: 10px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    flex: 1;
+    justify-content: center;
 }
 
-.flip-card-back {
-    background: #222;
-    color: white;
-    transform: rotateY(180deg);
-    padding: 20px;
-    text-align: center;
+.review-content h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #ffffff;
 }
 
-h2 {
-    margin: 20px 0;
+.type {
+    font-size: 0.82rem;
+    color: #94a3b8;
 }
 
 .rating {
-    font-size: 1.2em;
-    color: gold;
+    font-size: 1.1rem;
+    color: #fbbf24;
+    letter-spacing: 2px;
+}
+
+.flip-card-back {
+    background: #181c2a;
+    color: #e2e8f0;
+    transform: rotateY(180deg);
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 14px;
+}
+
+.flip-card-back h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.4rem;
+    color: #ffffff;
+}
+
+.flip-card-back p {
+    font-size: 0.92rem;
+    color: #cbd5e1;
+    line-height: 1.5;
+}
+
+.flip-card-back a {
+    display: inline-flex;
+    margin-top: 10px;
+    padding: 8px 18px;
+    border-radius: 9999px;
+    background: #f59e0b;
+    color: #0c0e14;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.flip-card-back a:hover {
+    background: #fbbf24;
+    transform: scale(1.05);
 }
 
 .section {
-    padding: 50px;
-    background: white;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 40px 24px;
+    background: #141721;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
     text-align: center;
-    margin-top: 20px;
+}
+
+.section h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.6rem;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.section p {
+    color: #94a3b8;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .navbar ul { display: none; }
 }
