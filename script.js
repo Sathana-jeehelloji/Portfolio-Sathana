@@ -233,4 +233,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
     metricNumbers.forEach(num => counterObserver.observe(num));
   }
+
+  // 11. Interactive 3D Creative Workspace Showcase Tilt
+  const workspaceStage = document.querySelector('#workspaceStage');
+  const workspaceCard3D = document.querySelector('#workspaceCard3D');
+
+  if (workspaceStage && workspaceCard3D) {
+    const handleWorkspaceMove = (e) => {
+      const rect = workspaceCard3D.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      
+      const rotateX = ((y - centerY) / centerY) * -8;
+      const rotateY = ((x - centerX) / centerX) * 10;
+
+      workspaceCard3D.style.transform = `perspective(1200px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.02, 1.02, 1.02)`;
+    };
+
+    const handleWorkspaceLeave = () => {
+      workspaceCard3D.style.transform = 'perspective(1200px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+    };
+
+    workspaceStage.addEventListener('mousemove', handleWorkspaceMove);
+    workspaceStage.addEventListener('mouseleave', handleWorkspaceLeave);
+  }
 });
+
